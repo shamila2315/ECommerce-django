@@ -4,7 +4,7 @@
 {% block content %}
 <section class="section-content padding-y bg">
   <div class="container">
-    <form action="" method="POST">
+    <form action="{% url 'place_order' %}" method="POST">
       {% csrf_token %}
       <div class="row">
 
@@ -107,8 +107,8 @@
                     </td>
                     <td>
                       <div class="price-wrap text-center">
-                        <var class="price d-block text-dark font-weight-bold">₹ {{ cart_item.sub_total }}</var>
-                        <small class="text-muted">₹ {{ cart_item.product.price }} each</small>
+                        <var class="price d-block text-dark font-weight-bold">$ {{ cart_item.sub_total }}</var>
+                        <small class="text-muted">$ {{ cart_item.product.price }} each</small>
                       </div>
                     </td>
                   </tr>
